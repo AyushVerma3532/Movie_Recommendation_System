@@ -40,8 +40,8 @@ class NewUserRatings(nn.Module):
 num_factors=20
 model_1=NewUserRatings(num_factors)
 
-item_factors = torch.load('C:\\Users\\NITRO\\Downloads\\item_factors.pth') #Previously trained item_factors
-movie_titles = pd.read_csv('C:\\Users\\NITRO\\Downloads\\movies3.csv')  # Columns: ['movie_id', 'title']
+item_factors = torch.load('item_factors.pth') #Previously trained item_factors
+movie_titles = pd.read_csv('movies3.csv')  # Columns: ['movie_id', 'title']
 movie_titles['genre_vector']=movie_titles['genre_vector'].astype('int64')
 Genres=movie_titles.columns.to_list()[4:23]
 movie_titles['genre_vector']=movie_titles['genre_vector'].astype(str)
